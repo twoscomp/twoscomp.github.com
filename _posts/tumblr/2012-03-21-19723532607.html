@@ -1,0 +1,12 @@
+---
+layout: post
+title: Itunes Wifi Sync/Bonjour Fix
+---
+
+<p>Ok this took me forever to solve so I feel compelled to share it.</p>
+
+<p>Wireless sync was the feature I looked forward to the most at the announcement of iOS 5. Well when it finally arrived, it worked for exactly one sync and then completely cut out on me. I think many of you who are on Windows may experience the same or just don&#8217;t care haha. </p>
+
+<p>Wifi Sync relies on Apple&#8217;s bonjour service to auto-magically configure communication between hardware and software network devices. But apparently bonjour chokes whenever it tries to resolve IPv6 ip addresses. The fix is pretty simple. Go into your network adapter settings and disable IPv6 on your tcp stack. Restart and done. I don&#8217;t know if this works for everyone&#8217;s NIC, so I would be interested in hearing from those for who this helps.</p>
+
+<p><img alt="Bonjour hates IPv6" height="491" src="http://dl.dropbox.com/u/4524468/Misc/wifi_sync_fix.png" width="395"/></p>
